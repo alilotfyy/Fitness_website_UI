@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TitanForge Fitness - Home</title>
+  
+  <!-- Stylesheet Link -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Favicon would go here -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <div class="sidebar collapsed">
+    <!-- Main Navigation Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Main Sections</button>
+      <ul class="sidebar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workouts.html">Workout</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- E-commerce Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Shop</button>
+      <ul class="sidebar-links">
+        <li><a href="supplements.html">Supplements</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="equipments.html">Sports Equipment</a></li>
+      </ul>
+    </div>
+
+    <!-- Business Portals Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Portal</button>
+      <ul class="sidebar-links">
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="b2e.html">B2E</a></li>
+        <li><a href="b2g.html">B2G</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="main-content collapsed">
+    
+    <!-- Header Section -->
+    <header>
+      <div class="header-left">
+        <!-- Hamburger menu for mobile -->
+        <button id="toggle-sidebar" class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        
+        <!-- Logo with link to homepage -->
+        <a href="index.html" class="logo">
+          Titan<span>Forge</span>
+        </a>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav>
+        <ul>
+          <li>
+            <a href="subscription.html" class="btn-gold">
+              <img src="images/crown.png" alt="Crown" class="icon-crown" />
+              Subscription
+            </a>
+          </li>
+          <li><a href="workouts.html" class="btn-header">Workouts</a></li>
+          <li><a href="nutrition.html" class="btn-header">Nutrition</a></li>
+          <li><a href="progress.html" class="btn-header">Progress Tracker</a></li>
+          <li><a href="community.html" class="btn-header">Community</a></li>
+          
+          <!-- Profile/login icon -->
+          <li>
+            <a href="login.html" class="profile-icon">
+              <img src="images/profile.png" alt="User Profile">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="checkout-section">
+      <!-- Checkout Progress Steps -->
+      <div class="checkout-progress">
+        <div class="step active" data-step="1">
+          <span class="step-number">1</span>
+          <span class="step-label">Review</span>
+        </div>
+        <div class="step" data-step="2">
+          <span class="step-number">2</span>
+          <span class="step-label">Information</span>
+        </div>
+        <div class="step" data-step="3">
+          <span class="step-number">3</span>
+          <span class="step-label">Payment</span>
+        </div>
+        <div class="step" data-step="4">
+          <span class="step-number">4</span>
+          <span class="step-label">Confirmation</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Review Cart -->
+      <div class="checkout-step active" id="step-1">
+        <h1>Review Your Order</h1>
+        
+        <div class="cart-items">
+          <div class="cart-item">
+            <div class="item-image">
+              <img src="pro-membership.png" alt="Pro Membership">
+            </div>
+            <div class="item-details">
+              <h3>TitanForge Pro Membership</h3>
+              <p>Annual Subscription - 12 months</p>
+              <div class="item-price">$199.99</div>
+            </div>
+            <div class="item-actions">
+              <button class="btn-remove">Remove</button>
+            </div>
+          </div>
+          
+          <div class="cart-item">
+            <div class="item-image">
+              <img src="meal-plan.png" alt="Meal Plan">
+            </div>
+            <div class="item-details">
+              <h3>Premium Meal Plan</h3>
+              <p>3-month customized nutrition</p>
+              <div class="item-price">$49.99</div>
+            </div>
+            <div class="item-actions">
+              <button class="btn-remove">Remove</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="promo-code">
+          <input type="text" placeholder="Enter promo code">
+          <button class="btn-apply">Apply</button>
+        </div>
+        
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>$249.98</span>
+          </div>
+          <div class="summary-row discount">
+            <span>Promo Code: FIT20</span>
+            <span>-$50.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>$199.98</span>
+          </div>
+        </div>
+        
+        <div class="checkout-actions">
+          <button class="btn-continue" data-next="2">Continue to Information</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Customer Information -->
+      <div class="checkout-step" id="step-2">
+        <h1>Customer Information</h1>
+        
+        <form class="customer-form">
+          <div class="form-section">
+            <h2>Contact Information</h2>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone">
+            </div>
+          </div>
+          
+          <div class="form-section">
+            <h2>Billing Address</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="address2">Apartment, suite, etc. (optional)</label>
+              <input type="text" id="address2">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" required>
+                  <option value="">Select country</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="state">State/Province</label>
+                <input type="text" id="state" required>
+              </div>
+              <div class="form-group">
+                <label for="zip">ZIP/Postal code</label>
+                <input type="text" id="zip" required>
+              </div>
+            </div>
+          </div>
+          
+          <div class="checkout-actions">
+            <button type="button" class="btn-back" data-prev="1">Back</button>
+            <button type="button" class="btn-continue" data-next="3">Continue to Payment</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 3: Payment -->
+      <div class="checkout-step" id="step-3">
+        <h1>Payment Method</h1>
+        
+        <div class="payment-container">
+          <div class="payment-methods">
+            <div class="payment-options">
+              <button class="payment-method active" data-method="credit">
+                <img src="" alt="Credit Card">
+                Credit/Debit Card
+              </button>
+              <button class="payment-method" data-method="paypal">
+                <img src="images/paypal.png" alt="PayPal">
+                PayPal
+              </button>
+              <button class="payment-method" data-method="applepay">
+                <img src="images/Apple-Pay.svg" alt="Apple Pay">
+                Apple Pay
+              </button>
+            </div>
+            
+            <form id="credit-card-form" class="payment-form active">
+              <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiry-date">Expiry Date</label>
+                  <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" placeholder="123" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="card-name">Name on Card</label>
+                <input type="text" id="card-name" placeholder="John Smith" required>
+              </div>
+            </form>
+            
+            <form id="paypal-form" class="payment-form">
+              <div class="paypal-info">
+                <p>You will be redirected to PayPal to complete your payment securely.</p>
+                <img src="images/paypal.png" alt="PayPal" class="paypal-logo">
+              </div>
+            </form>
+            
+            <form id="applepay-form" class="payment-form">
+              <div class="applepay-info">
+                <p>Complete payment with Face ID or Touch ID using Apple Pay.</p>
+                <img src="images/Apple-Pay.svg" alt="Apple Pay" class="applepay-logo">
+              </div>
+            </form>
+          </div>
+          
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-card">
+              <div class="summary-items">
+                <div class="summary-item">
+                  <span>TitanForge Pro Membership</span>
+                  <span>$199.99</span>
+                </div>
+                <div class="summary-item">
+                  <span>Premium Meal Plan</span>
+                  <span>$49.99</span>
+                </div>
+                <div class="summary-item discount">
+                  <span>Promo Code: FIT20</span>
+                  <span>-$50.00</span>
+                </div>
+              </div>
+              
+              <div class="summary-total">
+                <div class="summary-row">
+                  <span>Subtotal</span>
+                  <span>$249.98</span>
+                </div>
+                <div class="summary-row">
+                  <span>Discount</span>
+                  <span>-$50.00</span>
+                </div>
+                <div class="summary-row total">
+                  <span>Total</span>
+                  <span>$199.98</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="checkout-actions">
+          <button type="button" class="btn-back" data-prev="2">Back</button>
+          <button type="button" class="btn-pay" data-next="4">Complete Payment</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Confirmation -->
+      <div class="checkout-step" id="step-4">
+        <div class="confirmation-container">
+          <div class="confirmation-icon">
+            <svg viewBox="0 0 24 24">
+              <path fill="#4CAF50" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+            </svg>
+          </div>
+          <h1>Order Confirmed!</h1>
+          <p class="confirmation-message">Thank you for your purchase. Your order #TF20250001 has been confirmed.</p>
+          
+          <div class="confirmation-details">
+            <div class="detail-card">
+              <h3>Order Details</h3>
+              <div class="detail-row">
+                <span>Order Number:</span>
+                <span>TF20250001</span>
+              </div>
+              <div class="detail-row">
+                <span>Date:</span>
+                <span id="order-date">June 15, 2025</span>
+              </div>
+              <div class="detail-row">
+                <span>Total:</span>
+                <span>$199.98</span>
+              </div>
+              <div class="detail-row">
+                <span>Payment Method:</span>
+                <span>Visa •••• 4242</span>
+              </div>
+            </div>
+            
+            <div class="detail-card">
+              <h3>What's Next?</h3>
+              <ul class="next-steps">
+                <li>You'll receive an email confirmation shortly</li>
+                <li>Access your membership immediately in your account</li>
+                <li>Meal plan will be available within 24 hours</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="confirmation-actions">
+            <a href="profile.html" class="btn-header">Go to My Account</a>
+            <a href="workouts.html" class="btn-gold">Start Training</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-container">
+      <!-- Sitemap Links Column -->
+      <div class="footer-section">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workouts.html">Workout</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links Column -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://twitter.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Links Column -->
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="security-statement.html">Security Statement</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get fitness tips and special offers</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn-header">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+  // Wait for DOM to be fully loaded before executing JavaScript
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    // Collapsible sidebar sections functionality
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach(button => {
+      button.addEventListener('click', () => {
+        const links = button.nextElementSibling;
+        if (links) {
+          // Toggle display between block and none
+          links.style.display = links.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+
+    // Toggle entire sidebar visibility
+    const toggleBtn = document.getElementById('toggle-sidebar');
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.main-content');
+
+    toggleBtn.addEventListener('click', () => {
+      // Toggle collapsed class on both sidebar and main content
+      sidebar.classList.toggle('collapsed');
+      mainContent.classList.toggle('collapsed');
+      
+      // Optional: Store sidebar state in localStorage
+       localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+    });
+    
+    // Optional: Check for saved sidebar state on page load
+     const savedState = localStorage.getItem('sidebarCollapsed');
+     if (savedState === 'true') {
+       sidebar.classList.add('collapsed');
+       mainContent.classList.add('collapsed');
+     }
+
+    // Initialize all collapsible sections to be closed
+    document.querySelectorAll('.sidebar-links').forEach(links => {
+      links.style.display = 'none';
+    });
+  });
+</script>
+</body>
+</html>

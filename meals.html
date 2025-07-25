@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TitanForge Fitness - Meal Plans</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <div class="sidebar collapsed">
+    <!-- Main Navigation Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Main Sections</button>
+      <ul class="sidebar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workouts.html">Workout</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- E-commerce Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Shop</button>
+      <ul class="sidebar-links">
+        <li><a href="supplements.html">Supplements</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="equipments.html">Sports Equipment</a></li>
+      </ul>
+    </div>
+
+    <!-- Business Portals Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Portal</button>
+      <ul class="sidebar-links">
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="b2e.html">B2E</a></li>
+        <li><a href="b2g.html">B2G</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content collapsed">
+    <header>
+      <div class="header-left">
+        <button id="toggle-sidebar" class="hamburger">☰</button>
+        <a href="index.html" class="logo">Titan<span>Forge</span></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="subscription.html" class="btn-gold">
+            <img src="images/crown.png" class="icon-crown"> Subscription
+          </a></li>
+          <li><a href="cart.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">2</span>
+          </a></li>
+          <li><a href="login.html" class="profile-icon">
+            <img src="images/profile.png" alt="Profile">
+          </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MEAL PLANS SHOP -->
+    <section class="meals-shop">
+      <div class="shop-hero">
+        <div class="hero-content">
+          <h1>Premium Meal Plans</h1>
+          <p>Chef-prepared, nutritionist-approved meals delivered to your door</p>
+          <div class="hero-buttons">
+            <a href="#plans" class="btn-primary">View Plans</a>
+            <a href="#how-it-works" class="btn-secondary">How It Works</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOW IT WORKS -->
+      <div id="how-it-works" class="how-it-works">
+        <h2>How Our Meal Delivery Works</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <i class="fas fa-clipboard-list"></i>
+            <h3>Choose Your Plan</h3>
+            <p>Select from fat loss, muscle gain, or performance plans</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <i class="fas fa-utensils"></i>
+            <h3>Customize Meals</h3>
+            <p>Pick your favorite meals from our weekly menu</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <i class="fas fa-truck"></i>
+            <h3>Fresh Delivery</h3>
+            <p>Get chef-prepared meals delivered weekly</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <i class="fas fa-fire"></i>
+            <h3>Heat & Eat</h3>
+            <p>Ready in 3 minutes - no cooking required</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEAL PLANS -->
+      <div id="plans" class="meal-plans">
+        <div class="plans-header">
+          <h2>Choose Your Nutrition Plan</h2>
+          <div class="plan-filters">
+            <button class="filter-btn active" data-filter="all">All Plans</button>
+            <button class="filter-btn" data-filter="fat-loss">Fat Loss</button>
+            <button class="filter-btn" data-filter="muscle-gain">Muscle Gain</button>
+            <button class="filter-btn" data-filter="performance">Performance</button>
+          </div>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Fat Loss Plan -->
+          <div class="meal-plan fat-loss">
+            <div class="plan-badge">Most Popular</div>
+            <div class="plan-image">
+              <img src="images/fat-loss-meal.webp" alt="Fat Loss Meal Plan">
+            </div>
+            <div class="plan-details">
+              <h3>Lean & Mean</h3>
+              <p class="plan-description">Perfect for fat loss while maintaining muscle</p>
+              <div class="plan-macros">
+                <div class="macro">
+                  <i class="fas fa-drumstick-bite"></i>
+                  <span>High Protein</span>
+                </div>
+                <div class="macro">
+                  <i class="fas fa-seedling"></i>
+                  <span>Low Carb</span>
+                </div>
+                <div class="macro">
+                  <i class="fas fa-leaf"></i>
+                  <span>Veggie Packed</span>
+                </div>
+              </div>
+              <div class="plan-pricing">
+                <div class="price">$149<span>/week</span></div>
+                <div class="servings">14 meals</div>
+              </div>
+              <button class="add-to-cart">Select Plan</button>
+            </div>
+          </div>
+
+          <!-- Muscle Gain Plan -->
+          <div class="meal-plan muscle-gain">
+            <div class="plan-image">
+              <img src="images/mass-building-meal.avif" alt="Muscle Gain Meal Plan">
+            </div>
+            <div class="plan-details">
+              <h3>Mass Builder</h3>
+              <p class="plan-description">Calorie-dense meals for maximum gains</p>
+              <div class="plan-macros">
+                <div class="macro">
+                  <i class="fas fa-weight-hanging"></i>
+                  <span>High Calorie</span>
+                </div>
+                <div class="macro">
+                  <i class="fas fa-drumstick-bite"></i>
+                  <span>40g Protein/meal</span>
+                </div>
+                <div class="macro">
+                  <i class="fas fa-bread-slice"></i>
+                  <span>Complex Carbs</span>
+                </div>
+              </div>
+              <div class="plan-pricing">
+                <div class="price">$169<span>/week</span></div>
+                <div class="servings">14 meals</div>
+              </div>
+              <button class="add-to-cart">Select Plan</button>
+            </div>
+          </div>
+
+          <!-- Performance Plan -->
+          <div class="meal-plan performance">
+            <div class="plan-badge">Athlete Favorite</div>
+            <div class="plan-image">
+              <img src="images/peak-performance-meal.jpg" alt="Performance Meal Plan">
+            </div>
+            <div class="plan-details">
+              <h3>Peak Performance</h3>
+              <p class="plan-description">Optimized for athletes and active lifestyles</p>
+              <div class="plan-macros">
+                <div class="macro">
+                  <i class="fas fa-bolt"></i>
+                  <span>Energy Focused</span>
+                </div>
+                <div class="macro">
+                  <i class="fas fa-drumstick-bite"></i>
+                  <span>35g Protein/meal</span>
+                </div>
+                <div class="macro">
+                  <i class="fas fa-heart"></i>
+                  <span>Heart Healthy</span>
+                </div>
+              </div>
+              <div class="plan-pricing">
+                <div class="price">$159<span>/week</span></div>
+                <div class="servings">14 meals</div>
+              </div>
+              <button class="add-to-cart">Select Plan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEAL GALLERY -->
+      <div class="meal-gallery">
+        <h2>Sample Meals</h2>
+        <div class="gallery-grid">
+          <div class="meal-sample">
+            <img src="images/herb-crusted-salmon.jpg" alt="Meal 1">
+            <div class="meal-info">
+              <h4>Herb Crusted Salmon</h4>
+              <p>480 cal | 42g protein | 24g carbs</p>
+            </div>
+          </div>
+          <div class="meal-sample">
+            <img src="images/asian-beef-bowl.webp" alt="Meal 2">
+            <div class="meal-info">
+              <h4>Asian Beef Bowl</h4>
+              <p>520 cal | 45g protein | 38g carbs</p>
+            </div>
+          </div>
+          <div class="meal-sample">
+            <img src="images/mediterranean-chicken-meal.jpeg.avif" alt="Meal 3">
+            <div class="meal-info">
+              <h4>Mediterranean Chicken</h4>
+              <p>450 cal | 40g protein | 30g carbs</p>
+            </div>
+          </div>
+          <div class="meal-sample">
+            <img src="images/turkey-sweet-potato-meal.jpg" alt="Meal 4">
+            <div class="meal-info">
+              <h4>Turkey & Sweet Potato</h4>
+              <p>490 cal | 44g protein | 35g carbs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div class="testimonials">
+        <h2>What Our Members Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Lost 12lbs in 6 weeks without feeling hungry. The meals are delicious!"</p>
+            <div class="user">
+              <img src="images/sarah.jpg" alt="Sarah J.">
+              <span>Sarah J.</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Gained 5lbs of muscle while staying lean. Perfect for my bulk."</p>
+            <div class="user">
+              <img src="images/mike.webp" alt="Mike T.">
+              <span>Mike T.</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"Saves me 10+ hours/week on meal prep. Worth every penny."</p>
+            <div class="user">
+              <img src="images/janelift.webp" alt="Jessica L.">
+              <span>Jessica L.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- ==================== FOOTER ==================== -->
+   <footer>
+    <div class="footer-container">
+      <!-- Sitemap Links Column -->
+      <div class="footer-section">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workouts.html">Workout</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links Column -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://twitter.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Links Column -->
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="security-statement.html">Security Statement</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get fitness tips and special offers</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn-header">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Sidebar toggle
+      document.getElementById('toggle-sidebar').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('collapsed');
+        document.querySelector('.main-content').classList.toggle('collapsed');
+      });
+
+      // Plan filtering
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filter = this.dataset.filter;
+          const plans = document.querySelectorAll('.meal-plan');
+          
+          plans.forEach(plan => {
+            if (filter === 'all' || plan.classList.contains(filter)) {
+              plan.style.display = 'block';
+            } else {
+              plan.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Add to cart functionality
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const plan = this.closest('.meal-plan');
+          const planName = plan.querySelector('h3').textContent;
+          
+          // Update cart count
+          const cartCount = document.querySelector('.cart-count');
+          cartCount.textContent = parseInt(cartCount.textContent) + 1;
+          
+          // Visual feedback
+          this.textContent = 'Added!';
+          this.style.backgroundColor = '#4CAF50';
+          
+          setTimeout(() => {
+            this.textContent = 'Select Plan';
+            this.style.backgroundColor = '#e63946';
+          }, 2000);
+          
+          console.log(`Added ${planName} to cart`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

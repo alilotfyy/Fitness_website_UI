@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TitanForge Fitness - Home</title>
+  
+  <!-- Stylesheet Link -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <div class="sidebar collapsed">
+    <!-- Main Navigation Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Main Sections</button>
+      <ul class="sidebar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workouts.html">Workout</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- E-commerce Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Shop</button>
+      <ul class="sidebar-links">
+        <li><a href="supplements.html">Supplements</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="equipments.html">Sports Equipment</a></li>
+      </ul>
+    </div>
+
+    <!-- Business Portals Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Portal</button>
+      <ul class="sidebar-links">
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="b2e.html">B2E</a></li>
+        <li><a href="b2g.html">B2G</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="main-content collapsed">
+    
+    <!-- Header Section -->
+    <header>
+      <div class="header-left">
+        <!-- Hamburger menu for mobile -->
+        <button id="toggle-sidebar" class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        
+        <!-- Logo with link to homepage -->
+        <a href="index.html" class="logo">
+          Titan<span>Forge</span>
+        </a>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav>
+        <ul>
+          <li>
+            <a href="subscription.html" class="btn-gold">
+              <img src="images/crown.png" alt="Crown" class="icon-crown" />
+              Subscription
+            </a>
+          </li>
+          <li><a href="workouts.html" class="btn-header">Workouts</a></li>
+          <li><a href="nutrition.html" class="btn-header">Nutrition</a></li>
+          <li><a href="progress.html" class="btn-header">Progress Tracker</a></li>
+          <li><a href="community.html" class="btn-header">Community</a></li>
+          
+          <!-- Profile/login icon -->
+          <li>
+            <a href="login.html" class="profile-icon">
+              <img src="images/profile.png" alt="User Profile">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="workout-section">
+      <div class="workout-generator">
+        <h2>AI-Powered Workout Generator</h2>
+        <p>Get a personalized workout plan based on your goals and fitness level</p>
+        
+        <form id="workout-form">
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="13" max="100" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="fitness-level">Current Fitness Level</label>
+            <select id="fitness-level" name="fitness-level" required>
+              <option value="">Select</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="goal">Primary Goal</label>
+            <select id="goal" name="goal" required>
+              <option value="">Select</option>
+              <option value="strength">Build Strength</option>
+              <option value="muscle">Build Muscle</option>
+              <option value="fat-loss">Lose Fat</option>
+              <option value="endurance">Improve Endurance</option>
+              <option value="flexibility">Improve Flexibility</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="days-per-week">Workout Days Per Week</label>
+            <select id="days-per-week" name="days-per-week" required>
+              <option value="">Select</option>
+              <option value="2">2 Days</option>
+              <option value="3">3 Days</option>
+              <option value="4">4 Days</option>
+              <option value="5">5 Days</option>
+              <option value="6">6 Days</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="equipment">Available Equipment</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="equipment" value="dumbbells"> Dumbbells</label>
+              <label><input type="checkbox" name="equipment" value="barbell"> Barbell</label>
+              <label><input type="checkbox" name="equipment" value="kettlebells"> Kettlebells</label>
+              <label><input type="checkbox" name="equipment" value="resistance-bands"> Resistance Bands</label>
+              <label><input type="checkbox" name="equipment" value="none"> No Equipment</label>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn-generate">Generate Workout Plan</button>
+        </form>
+      </div>
+      
+      <div id="workout-results" class="workout-results hidden">
+        <h2>Your Personalized Workout Plan</h2>
+        <div id="workout-plan"></div>
+        <button id="save-plan" class="btn-save">Save to My Profile</button>
+        <button id="regenerate" class="btn-generate">Generate New Plan</button>
+      </div>
+      
+      <div class="workout-categories">
+        <h2>Workout Categories</h2>
+        
+        <div class="workout-card">
+          <h3>Strength Training</h3>
+          <p>Build muscle with compound lifts and progressive overload.</p>
+          <button onclick="window.location.href='strength.html'">View Plan</button>
+        </div>
+        
+        <div class="workout-card">
+          <h3>Cardio Blast</h3>
+          <p>Burn fat and improve stamina with our high-energy cardio sessions.</p>
+          <button onclick="window.location.href='cardio.html'">View Plan</button>
+        </div>
+        
+        <div class="workout-card">
+          <h3>Flexibility & Mobility</h3>
+          <p>Enhance your range of motion and prevent injury with daily mobility drills.</p>
+          <button onclick="window.location.href='flexibility.html'">View Plan</button>
+        </div>
+      </div>
+    </section>
+
+   <!-- ==================== FOOTER ==================== -->
+   <footer>
+    <div class="footer-container">
+      <!-- Sitemap Links Column -->
+      <div class="footer-section">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workouts.html">Workout</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links Column -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://twitter.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Links Column -->
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="security-statement.html">Security Statement</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get fitness tips and special offers</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn-header">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Toggle sidebar
+      const toggleBtn = document.getElementById('toggle-sidebar');
+      const sidebar = document.querySelector('.sidebar');
+      const mainContent = document.querySelector('.main-content');
+  
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('collapsed');
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+      });
+      
+      // Check for saved sidebar state
+      if (localStorage.getItem('sidebarCollapsed') === 'true') {
+        sidebar.classList.add('collapsed');
+        mainContent.classList.add('collapsed');
+      }
+      
+      // Collapsible sidebar sections
+      document.querySelectorAll('.collapsible').forEach(button => {
+        button.addEventListener('click', () => {
+          const links = button.nextElementSibling;
+          if (links) {
+            links.style.display = links.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+      
+      // Workout form submission
+      const workoutForm = document.getElementById('workout-form');
+      const workoutResults = document.getElementById('workout-results');
+      const workoutPlan = document.getElementById('workout-plan');
+      
+      workoutForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+          age: document.getElementById('age').value,
+          gender: document.getElementById('gender').value,
+          fitnessLevel: document.getElementById('fitness-level').value,
+          goal: document.getElementById('goal').value,
+          daysPerWeek: document.getElementById('days-per-week').value,
+          equipment: Array.from(document.querySelectorAll('input[name="equipment"]:checked')).map(el => el.value)
+        };
+        
+        // Generate workout plan (in a real app, this would call an API)
+        const workout = generateWorkoutPlan(formData);
+        
+        // Display results
+        workoutPlan.innerHTML = workout;
+        workoutResults.classList.remove('hidden');
+        workoutForm.classList.add('hidden');
+        
+        // Scroll to results
+        workoutResults.scrollIntoView({ behavior: 'smooth' });
+      });
+      
+      // Regenerate button
+      document.getElementById('regenerate').addEventListener('click', function() {
+        workoutResults.classList.add('hidden');
+        workoutForm.classList.remove('hidden');
+        workoutForm.scrollIntoView({ behavior: 'smooth' });
+      });
+      
+      // Save plan button
+      document.getElementById('save-plan').addEventListener('click', function() {
+        alert('Workout plan saved to your profile!');
+        // In a real app, this would save to user's account
+      });
+      
+      // Mock workout generator function
+      function generateWorkoutPlan(data) {
+        // This is a simplified mock - a real implementation would use AI
+        let workoutHTML = `
+          <div class="plan-summary">
+            <h3>${data.goal.replace('-', ' ').toUpperCase()} PLAN</h3>
+            <p>Customized for ${data.age}-year-old ${data.gender} at ${data.fitnessLevel} level</p>
+            <p>${data.daysPerWeek} days per week | Equipment: ${data.equipment.join(', ') || 'None'}</p>
+          </div>
+        `;
+        
+        // Generate workout days based on days per week
+        for (let i = 1; i <= parseInt(data.daysPerWeek); i++) {
+          workoutHTML += `
+            <div class="workout-day">
+              <h4>Day ${i}</h4>
+              <ul class="exercises">
+                ${generateExercises(data.goal, data.fitnessLevel, data.equipment).join('')}
+              </ul>
+            </div>
+          `;
+        }
+        
+        workoutHTML += `
+          <div class="plan-notes">
+            <h4>Workout Notes</h4>
+            <p>${getWorkoutNotes(data.goal, data.fitnessLevel)}</p>
+          </div>
+        `;
+        
+        return workoutHTML;
+      }
+      
+      function generateExercises(goal, level, equipment) {
+        // Mock exercise data based on goal and equipment
+        const exercises = {
+          strength: [
+            'Barbell Squat: 4 sets x 5 reps',
+            'Bench Press: 4 sets x 5 reps',
+            'Deadlift: 3 sets x 5 reps',
+            'Overhead Press: 3 sets x 5 reps',
+            'Pull-ups: 3 sets to failure'
+          ],
+          muscle: [
+            'Dumbbell Bench Press: 4 sets x 8-12 reps',
+            'Lat Pulldown: 4 sets x 10 reps',
+            'Leg Press: 4 sets x 10 reps',
+            'Dumbbell Shoulder Press: 3 sets x 10 reps',
+            'Bicep Curls: 3 sets x 12 reps'
+          ],
+          'fat-loss': [
+            'Circuit Training (3 rounds):',
+            '- Jump Squats: 30 seconds',
+            '- Push-ups: 30 seconds',
+            '- Mountain Climbers: 30 seconds',
+            '- Plank: 60 seconds',
+            'Treadmill Intervals: 20 minutes'
+          ],
+          endurance: [
+            'Running: 30-45 minutes moderate pace',
+            'Cycling: 45 minutes',
+            'Swimming: 30 minutes',
+            'Rowing Machine: 20 minutes'
+          ],
+          flexibility: [
+            'Dynamic Stretching Routine',
+            'Yoga Flow Sequence',
+            'Foam Rolling',
+            'Mobility Drills'
+          ]
+        };
+        
+        // Adjust based on equipment
+        if (!equipment.includes('barbell') && goal === 'strength') {
+          exercises.strength = exercises.strength.map(ex => 
+            ex.replace('Barbell', 'Dumbbell').replace('Deadlift', 'Dumbbell Deadlift')
+          );
+        }
+        
+        if (equipment.includes('none')) {
+          exercises.strength = [
+            'Pistol Squats: 3 sets x 8 reps',
+            'Push-up Variations: 4 sets x 12 reps',
+            'Pull-ups (if possible): 3 sets',
+            'Plank Variations: 3 sets x 60 seconds'
+          ];
+        }
+        
+        return exercises[goal] || exercises.strength;
+      }
+      
+      function getWorkoutNotes(goal, level) {
+        const notes = {
+          strength: `Focus on progressive overload - aim to increase weight by 2.5-5lbs each week. Rest 2-3 minutes between sets.`,
+          muscle: `Keep rest periods to 60-90 seconds between sets. Focus on mind-muscle connection and controlled movements.`,
+          'fat-loss': `Keep rest periods short (30-60 seconds). Maintain intensity throughout the workout. Combine with nutrition plan for best results.`,
+          endurance: `Gradually increase duration or intensity each week. Stay hydrated and maintain steady pace.`,
+          flexibility: `Hold stretches for 30-60 seconds. Breathe deeply and never force beyond comfortable range.`
+        };
+        
+        return notes[goal] || 'Perform each exercise with proper form. Adjust weights as needed.';
+      }
+    });
+  </script>
+</body>
+</html>

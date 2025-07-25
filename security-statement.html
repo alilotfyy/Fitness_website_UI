@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security Statement - TitanForge</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Main content spacing */
+        .main-content {
+            padding-top: 100px; /* Space for header */
+        }
+        
+        /* Security statement content styling */
+        .security-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #eee;
+        }
+        
+        .security-content h1 {
+            font-size: 42px;
+            color: #e63946;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .security-content section {
+            margin-bottom: 40px;
+            background-color: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .security-content h2 {
+            font-size: 28px;
+            color: #e63946;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .security-content p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        
+        /* Header styling */
+        header {
+            position: relative;
+            background-color: #000;
+            padding: 20px 40px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .main-content {
+                padding-top: 80px;
+            }
+            
+            .security-content {
+                padding: 15px;
+            }
+            
+            .security-content h1 {
+                font-size: 32px;
+            }
+            
+            .security-content h2 {
+                font-size: 24px;
+            }
+            
+            .security-content section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <div class="sidebar collapsed">
+      <!-- Main Navigation Section -->
+      <div class="sidebar-section">
+        <button class="collapsible">Main Sections</button>
+        <ul class="sidebar-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workouts.html">Workout</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- E-commerce Section -->
+      <div class="sidebar-section">
+        <button class="collapsible">Shop</button>
+        <ul class="sidebar-links">
+          <li><a href="supplements.html">Supplements</a></li>
+          <li><a href="meals.html">Meals</a></li>
+          <li><a href="equipments.html">Sports Equipment</a></li>
+        </ul>
+      </div>
+  
+      <!-- Business Portals Section -->
+      <div class="sidebar-section">
+        <button class="collapsible">Portal</button>
+        <ul class="sidebar-links">
+          <li><a href="b2b.html">B2B</a></li>
+          <li><a href="b2e.html">B2E</a></li>
+          <li><a href="b2g.html">B2G</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content collapsed">
+        <header>
+            <div class="header-left">
+                <button id="toggle-sidebar" class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                <a href="index.html" class="logo">Titan<span>Forge</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="subscription.html" class="btn-gold">
+                            <img src="images/crown.png" alt="Premium Subscription" class="icon-crown" />
+                            Subscription
+                        </a>
+                    </li>
+                    <li><a href="workouts.html" class="btn-header">Workouts</a></li>
+                    <li><a href="nutrition.html" class="btn-header">Nutrition</a></li>
+                    <li><a href="progress.html" class="btn-header">Progress Tracker</a></li>
+                    <li><a href="community.html" class="btn-header">Community</a></li>
+                    <li><a href="login.html" class="profile-icon">
+                        <img src="images/profile.png" alt="User Profile" />
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="security-content">
+            <h1>Security Statement</h1>
+            
+            <section>
+                <h2>Our Commitment to Security</h2>
+                <p>TitanForge takes the security of your data seriously. We implement industry-standard practices to safeguard your information against unauthorized access, disclosure, alteration, and destruction.</p>
+            </section>
+
+            <section>
+                <h2>Data Encryption</h2>
+                <p>All user data is transmitted over secure HTTPS connections with TLS 1.2+ encryption. Data at rest is protected using AES-256 encryption standards in our databases.</p>
+            </section>
+
+            <section>
+                <h2>Access Controls</h2>
+                <p>We implement strict role-based access controls (RBAC) with multi-factor authentication for all administrative access. Regular access reviews ensure only authorized personnel have appropriate permissions.</p>
+            </section>
+
+            <section>
+                <h2>Regular Audits</h2>
+                <p>Our systems undergo quarterly security audits by independent third parties. We perform automated vulnerability scanning weekly and patch critical vulnerabilities within 72 hours of discovery.</p>
+            </section>
+            
+            <section>
+                <h2>Incident Response</h2>
+                <p>We maintain a 24/7 security operations center with defined incident response procedures. In the event of a security incident, we will notify affected users within 72 hours of confirmation.</p>
+            </section>
+            
+            <section>
+                <h2>Your Responsibilities</h2>
+                <p>While we secure our systems, we recommend users enable two-factor authentication, use strong passwords, and avoid sharing login credentials to enhance account security.</p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="workouts.html">Workout</a></li>
+                        <li><a href="nutrition.html">Nutrition</a></li>
+                        <li><a href="progress.html">Progress</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://twitter.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="security-statement.html">Security Statement</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(button => {
+                button.addEventListener('click', () => {
+                    const links = button.nextElementSibling;
+                    if (links) {
+                        links.style.display = links.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+
+            const toggleBtn = document.getElementById('toggle-sidebar');
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('collapsed');
+                mainContent.classList.toggle('collapsed');
+            });
+        });
+    </script>
+</body>
+</html>

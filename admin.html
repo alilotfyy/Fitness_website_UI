@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - TitanForge Fitness</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to admin-specific CSS -->
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Titan<span>Forge</span></a>
+        <nav>
+            <ul>
+                <li><a href="logout.html" class="btn-header">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin-section">
+        <h2>Admin Dashboard</h2>
+        <p>Welcome, Admin! You have access to manage the website.</p>
+        <!-- Add admin-specific features here -->
+    </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-container">
+      <!-- Sitemap Links Column -->
+      <div class="footer-section">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workouts.html">Workout</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links Column -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://twitter.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Links Column -->
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="security-statement.html">Security Statement</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get fitness tips and special offers</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn-header">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+  // Wait for DOM to be fully loaded before executing JavaScript
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    // Collapsible sidebar sections functionality
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach(button => {
+      button.addEventListener('click', () => {
+        const links = button.nextElementSibling;
+        if (links) {
+          // Toggle display between block and none
+          links.style.display = links.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+
+    // Toggle entire sidebar visibility
+    const toggleBtn = document.getElementById('toggle-sidebar');
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.main-content');
+
+    toggleBtn.addEventListener('click', () => {
+      // Toggle collapsed class on both sidebar and main content
+      sidebar.classList.toggle('collapsed');
+      mainContent.classList.toggle('collapsed');
+      
+      // Optional: Store sidebar state in localStorage
+       localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+    });
+    
+    // Optional: Check for saved sidebar state on page load
+     const savedState = localStorage.getItem('sidebarCollapsed');
+     if (savedState === 'true') {
+       sidebar.classList.add('collapsed');
+       mainContent.classList.add('collapsed');
+     }
+
+    // Initialize all collapsible sections to be closed
+    document.querySelectorAll('.sidebar-links').forEach(links => {
+      links.style.display = 'none';
+    });
+  });
+</script>
+</body>
+</html>

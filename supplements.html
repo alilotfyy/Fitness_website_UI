@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TitanForge Fitness - Supplement Shop</title>
+  
+  <!-- Stylesheet Link -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Favicon would go here -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <div class="sidebar collapsed">
+    <!-- Main Navigation Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Main Sections</button>
+      <ul class="sidebar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workouts.html">Workout</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- E-commerce Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Shop</button>
+      <ul class="sidebar-links">
+        <li><a href="supplements.html">Supplements</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="equipments.html">Sports Equipment</a></li>
+      </ul>
+    </div>
+
+    <!-- Business Portals Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Portal</button>
+      <ul class="sidebar-links">
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="b2e.html">B2E</a></li>
+        <li><a href="b2g.html">B2G</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="main-content collapsed">
+    
+    <!-- Header Section -->
+    <header>
+      <div class="header-left">
+        <!-- Hamburger menu for mobile -->
+        <button id="toggle-sidebar" class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        
+        <!-- Logo with link to homepage -->
+        <a href="index.html" class="logo">
+          Titan<span>Forge</span>
+        </a>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav>
+        <ul>
+          <li>
+            <a href="subscription.html" class="btn-gold">
+              <img src="images/crown.png" alt="Crown" class="icon-crown" />
+              Subscription
+            </a>
+          </li>
+          <li><a href="workouts.html" class="btn-header">Workouts</a></li>
+          <li><a href="nutrition.html" class="btn-header">Nutrition</a></li>
+          <li><a href="progress.html" class="btn-header">Progress Tracker</a></li>
+          <li><a href="community.html" class="btn-header">Community</a></li>
+          
+          <!-- Shopping cart icon -->
+          <li>
+            <a href="cart.html" class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">3</span>
+            </a>
+          </li>
+          
+          <!-- Profile/login icon -->
+          <li>
+            <a href="login.html" class="profile-icon">
+              <img src="images/profile.png" alt="User Profile">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Supplements Shop Section -->
+    <section class="supplements-shop">
+      <div class="shop-header">
+        <h1>Performance Supplements</h1>
+        <p class="subtitle">Premium quality supplements to fuel your fitness journey</p>
+        
+        <div class="shop-controls">
+          <div class="search-bar">
+            <input type="text" placeholder="Search supplements...">
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          
+          <div class="filter-controls">
+            <select class="category-filter">
+              <option value="all">All Categories</option>
+              <option value="protein">Protein</option>
+              <option value="preworkout">Pre-Workout</option>
+              <option value="recovery">Recovery</option>
+              <option value="vitamins">Vitamins</option>
+            </select>
+            
+            <select class="sort-filter">
+              <option value="popular">Sort by: Popularity</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="shop-container">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar">
+          <div class="filter-section">
+            <h3>Categories</h3>
+            <ul class="filter-list">
+              <li><a href="#" class="active">All Supplements</a></li>
+              <li><a href="#">Protein Powders</a></li>
+              <li><a href="#">Pre-Workout</a></li>
+              <li><a href="#">Post-Workout</a></li>
+              <li><a href="#">Amino Acids</a></li>
+              <li><a href="#">Vitamins & Minerals</a></li>
+              <li><a href="#">Fat Burners</a></li>
+              <li><a href="#">Specialty Supplements</a></li>
+            </ul>
+          </div>
+          
+          <div class="filter-section">
+            <h3>Price Range</h3>
+            <div class="price-range">
+              <input type="range" min="0" max="100" value="50" class="slider">
+              <div class="price-values">
+                <span>$0</span>
+                <span>$100+</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <h3>Brand</h3>
+            <ul class="filter-list">
+              <li>
+                <label class="checkbox-container">TitanForge
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="checkbox-container">Optimum Nutrition
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="checkbox-container">MuscleTech
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="checkbox-container">BSN
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="checkbox-container">Dymatize
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="filter-section">
+            <h3>Rating</h3>
+            <ul class="rating-filter">
+              <li>
+                <a href="#">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>& Up</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>& Up</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>& Up</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        
+        <!-- Product Grid -->
+        <div class="product-grid">
+          <!-- Product Card 1 -->
+          <div class="product-card">
+            <div class="product-badge">Best Seller</div>
+            <div class="product-image">
+              <img src="images/whey-protein.png" alt="Titan Whey Protein">
+              <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+              <span class="product-brand">TitanForge</span>
+              <h3 class="product-title">Whey Protein Isolate</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-count">(142)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$39.99</span>
+                <span class="original-price">$49.99</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+          
+          <!-- Product Card 2 -->
+          <div class="product-card">
+            <div class="product-badge">New</div>
+            <div class="product-image">
+              <img src="images/pre-workout.webp" alt="Titan Pre-Workout">
+              <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+              <span class="product-brand">TitanForge</span>
+              <h3 class="product-title">Nitro Pre-Workout</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="rating-count">(87)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$34.99</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+          
+          <!-- Product Card 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/bcaa.webp" alt="BCAA Powder">
+              <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+              <span class="product-brand">TitanForge</span>
+              <h3 class="product-title">BCAA 2:1:1 Powder</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-count">(203)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$24.99</span>
+                <span class="original-price">$29.99</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+          
+          <!-- Product Card 4 -->
+          <div class="product-card">
+            <div class="product-badge">Limited</div>
+            <div class="product-image">
+              <img src="images/creatine.webp" alt="Creatine Monohydrate">
+              <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+              <span class="product-brand">TitanForge</span>
+              <h3 class="product-title">Creatine Monohydrate</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-count">(315)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$19.99</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+          
+          <!-- Product Card 5 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/multivitamin.avif" alt="Multivitamin">
+              <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+              <span class="product-brand">TitanForge</span>
+              <h3 class="product-title">Elite Multivitamin</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-count">(94)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$27.99</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+          
+          <!-- Product Card 6 -->
+          <div class="product-card">
+            <div class="product-badge">Sale</div>
+            <div class="product-image">
+              <img src="images/omega.jpg.avif" alt="Omega-3">
+              <button class="quick-view">Quick View</button>
+            </div>
+            <div class="product-info">
+              <span class="product-brand">TitanForge</span>
+              <h3 class="product-title">Omega-3 Fish Oil</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="rating-count">(76)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$21.99</span>
+                <span class="original-price">$29.99</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partners Section -->
+    <section class="partners-section">
+      <div class="partners-container">
+        <h2>Trusted by the Best in the Industry</h2>
+        <p class="partners-subtitle">We proudly partner with the world's leading supplement brands</p>
+        
+        <div class="partners-grid">
+          <!-- Add your partner logo images here -->
+          <div class="partner-logo">
+            <img src="images/optimum-nutrition.jpg" alt="Optimum Nutrition">
+          </div>
+          <div class="partner-logo">
+            <img src="images/Red-rex.png.webp " alt="Big Ramy Labs">
+          </div>
+          <div class="partner-logo">
+            <img src="images/Muscletech.png" alt="MuscleTech">
+          </div>
+          <div class="partner-logo">
+            <img src="images/BSN.png" alt="BSN">
+          </div>
+          <div class="partner-logo">
+            <img src="images/Dymatize.jpg" alt="Dymatize">
+          </div>
+          <div class="partner-logo">
+            <img src="images/animal-logojpg.webp" alt="Animal">
+          </div>
+          <div class="partner-logo">
+            <img src="images/now.png" alt="now">
+          </div>
+          <div class="partner-logo">
+            <img src="images/centrum.avif" alt="centrum">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="footer-container">
+        <!-- Sitemap Links Column -->
+        <div class="footer-section">
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workouts.html">Workout</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links Column -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://twitter.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links Column -->
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="security-statement.html">Security Statement</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Wait for DOM to be fully loaded before executing JavaScript
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      // Collapsible sidebar sections functionality
+      const collapsibles = document.querySelectorAll('.collapsible');
+      collapsibles.forEach(button => {
+        button.addEventListener('click', () => {
+          const links = button.nextElementSibling;
+          if (links) {
+            // Toggle display between block and none
+            links.style.display = links.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+  
+      // Toggle entire sidebar visibility
+      const toggleBtn = document.getElementById('toggle-sidebar');
+      const sidebar = document.querySelector('.sidebar');
+      const mainContent = document.querySelector('.main-content');
+  
+      toggleBtn.addEventListener('click', () => {
+        // Toggle collapsed class on both sidebar and main content
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('collapsed');
+        
+        // Optional: Store sidebar state in localStorage
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+      });
+      
+      // Optional: Check for saved sidebar state on page load
+      const savedState = localStorage.getItem('sidebarCollapsed');
+      if (savedState === 'true') {
+        sidebar.classList.add('collapsed');
+        mainContent.classList.add('collapsed');
+      }
+
+      // Quick view button functionality
+      const quickViewButtons = document.querySelectorAll('.quick-view');
+      quickViewButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          // In a real implementation, this would open a modal with product details
+          alert('Quick view feature would show more product details here!');
+        });
+      });
+
+      // Add to cart button functionality
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const productCard = button.closest('.product-card');
+          const productName = productCard.querySelector('.product-title').textContent;
+          
+          // Update cart count
+          const cartCount = document.querySelector('.cart-count');
+          let currentCount = parseInt(cartCount.textContent);
+          cartCount.textContent = currentCount + 1;
+          
+          // Visual feedback
+          button.textContent = 'Added!';
+          button.style.backgroundColor = '#4caf50';
+          
+          setTimeout(() => {
+            button.textContent = 'Add to Cart';
+            button.style.backgroundColor = '#e63946';
+          }, 2000);
+          
+          console.log(`Added ${productName} to cart`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TitanForge Fitness - Nutrition</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <div class="sidebar collapsed">
+    <!-- Main Navigation Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Main Sections</button>
+      <ul class="sidebar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workouts.html">Workout</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- E-commerce Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Shop</button>
+      <ul class="sidebar-links">
+        <li><a href="supplements.html">Supplements</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="equipments.html">Sports Equipment</a></li>
+      </ul>
+    </div>
+
+    <!-- Business Portals Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Portal</button>
+      <ul class="sidebar-links">
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="b2e.html">B2E</a></li>
+        <li><a href="b2g.html">B2G</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="main-content collapsed">
+    
+    <header>
+      <div class="header-left">
+        <button id="toggle-sidebar" class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        <a href="index.html" class="logo">
+          Titan<span>Forge</span>
+        </a>
+      </div>
+      
+      <nav>
+        <ul>
+          <li>
+            <a href="subscription.html" class="btn-gold">
+              <img src="images/crown.png" alt="Crown" class="icon-crown" />
+              Subscription
+            </a>
+          </li>
+          <li><a href="workouts.html" class="btn-header">Workouts</a></li>
+          <li><a href="nutrition.html" class="btn-header active">Nutrition</a></li>
+          <li><a href="progress.html" class="btn-header">Progress Tracker</a></li>
+          <li><a href="community.html" class="btn-header">Community</a></li>
+          <li>
+            <a href="login.html" class="profile-icon">
+              <img src="images/profile.png" alt="User Profile">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="nutrition-section">
+      <div class="nutrition-hero">
+        <h1>Fuel Your Performance</h1>
+        <p>Optimize your nutrition with science-backed meal plans tailored to your goals</p>
+        <a href="#nutrition-plans" class="btn-gold">View Plans</a>
+      </div>
+
+      <div class="nutrition-quiz">
+        <h2>Find Your Perfect Nutrition Plan</h2>
+        <p>Answer a few questions to get personalized recommendations</p>
+        <button id="start-quiz" class="btn-header">Start Nutrition Quiz</button>
+      </div>
+
+      <div id="nutrition-plans" class="nutrition-plans">
+        <h2><i class="fas fa-utensils"></i> Nutrition Plans</h2>
+        <div class="plan-filters">
+          <button class="filter-btn active" data-filter="all">All Plans</button>
+          <button class="filter-btn" data-filter="muscle">Muscle Building</button>
+          <button class="filter-btn" data-filter="fat-loss">Fat Loss</button>
+          <button class="filter-btn" data-filter="vegan">Vegan</button>
+          <button class="filter-btn" data-filter="performance">Performance</button>
+        </div>
+
+        <div class="plans-grid">
+          <div class="meal-card" data-category="muscle">
+            <div class="meal-image" style="background-image: url('images/high-protien.jpg');">
+              <span class="meal-badge">Most Popular</span>
+            </div>
+            <div class="meal-content">
+              <h3>High Protein Diet</h3>
+              <div class="meal-meta">
+                <span><i class="fas fa-fire"></i> 2500-3000 kcal</span>
+                <span><i class="fas fa-clock"></i> 5 meals/day</span>
+              </div>
+              <p>Ideal for muscle building and recovery. Includes chicken, eggs, tofu, and protein shakes with optimal macro ratios.</p>
+              <div class="meal-actions">
+                <button class="btn-view" data-plan="protein-meal">View Full Plan</button>
+                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card" data-category="fat-loss">
+            <div class="meal-image" style="background-image: url('images/keto.jpg');">
+              <span class="meal-badge">Trending</span>
+            </div>
+            <div class="meal-content">
+              <h3>Keto Diet</h3>
+              <div class="meal-meta">
+                <span><i class="fas fa-fire"></i> 1800-2200 kcal</span>
+                <span><i class="fas fa-clock"></i> 3 meals + 2 snacks</span>
+              </div>
+              <p>Low-carb, high-fat meals designed for fat loss and sustained energy while maintaining muscle mass.</p>
+              <div class="meal-actions">
+                <button class="btn-view" data-plan="keto-meal">View Full Plan</button>
+                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card" data-category="vegan">
+            <div class="meal-image" style="background-image: url('images/vegan-meal-prep.jpg');"></div>
+            <div class="meal-content">
+              <h3>Vegan Meal Prep</h3>
+              <div class="meal-meta">
+                <span><i class="fas fa-fire"></i> 2000-2500 kcal</span>
+                <span><i class="fas fa-clock"></i> 4 meals/day</span>
+              </div>
+              <p>Balanced plant-based meals that fuel workouts and support overall health with complete protein sources.</p>
+              <div class="meal-actions">
+                <button class="btn-view" data-plan="vegan-meal">View Full Plan</button>
+                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card" data-category="performance">
+            <div class="meal-image" style="background-image: url('images/athlete-performance.jpeg');"></div>
+            <div class="meal-content">
+              <h3>Athlete Performance</h3>
+              <div class="meal-meta">
+                <span><i class="fas fa-fire"></i> 3000-3500 kcal</span>
+                <span><i class="fas fa-clock"></i> 6 meals/day</span>
+              </div>
+              <p>High-energy nutrition plan for endurance athletes with optimal carb timing and recovery foods.</p>
+              <div class="meal-actions">
+                <button class="btn-view" data-plan="performance-meal">View Full Plan</button>
+                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nutrition-features">
+        <h2>Why Our Nutrition Plans Work</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-clipboard-check"></i>
+            <h3>Science-Backed</h3>
+            <p>All plans developed by certified nutritionists based on latest research</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Meal Variety</h3>
+            <p>Over 200 recipes to prevent boredom and ensure nutrient diversity</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Digital Tools</h3>
+            <p>Track macros, log meals and get adjustments through our app</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-user-md"></i>
+            <h3>Expert Support</h3>
+            <p>Access to nutrition coaches for personalized guidance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workouts.html">Workout</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/TitanForger.fit" target="_blank">Twitter</a></li>
+            <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="security-statement.html">Security Statement</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Get nutrition tips and special offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn-header">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Plan Details Modal -->
+  <div id="plan-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="modal-title">Plan Details</h2>
+      <div id="modal-body">
+        <!-- Content loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Toggle sidebar
+      const toggleBtn = document.getElementById('toggle-sidebar');
+      const sidebar = document.querySelector('.sidebar');
+      const mainContent = document.querySelector('.main-content');
+  
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('collapsed');
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+      });
+      
+      // Check for saved sidebar state
+      if (localStorage.getItem('sidebarCollapsed') === 'true') {
+        sidebar.classList.add('collapsed');
+        mainContent.classList.add('collapsed');
+      }
+      
+      // Collapsible sidebar sections
+      document.querySelectorAll('.collapsible').forEach(button => {
+        button.addEventListener('click', () => {
+          const links = button.nextElementSibling;
+          if (links) {
+            links.style.display = links.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+
+      // Filter nutrition plans
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          
+          // Filter cards
+          const filter = button.dataset.filter;
+          const cards = document.querySelectorAll('.meal-card');
+          
+          cards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Start quiz button
+      document.getElementById('start-quiz').addEventListener('click', function() {
+        alert('This would launch a nutrition quiz in a real implementation');
+      });
+
+      // Save meal plan buttons
+      document.querySelectorAll('.btn-save').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.stopPropagation();
+          this.innerHTML = '<i class="fas fa-bookmark"></i>';
+          this.classList.add('saved');
+          // In a real app, this would save to user's profile
+        });
+      });
+
+      // View plan buttons - Modal functionality
+      const modal = document.getElementById('plan-modal');
+      const closeBtn = document.querySelector('.close-modal');
+
+      document.querySelectorAll('.btn-view').forEach(button => {
+        button.addEventListener('click', function() {
+          const planId = this.dataset.plan;
+          showPlanDetails(planId);
+        });
+      });
+
+      function showPlanDetails(planId) {
+        // Mock data - in a real app this would come from an API
+        const plans = {
+          'protein-meal': {
+            title: 'High Protein Diet Plan',
+            content: `
+              <div class="plan-details">
+                <div class="plan-header">
+                  <img src="images/high-protien.jpg" alt="High Protein Meal" class="plan-image">
+                  <div class="plan-meta">
+                    <p><strong>Calories:</strong> 2500-3000 kcal/day</p>
+                    <p><strong>Macros:</strong> 40% Protein, 30% Carbs, 30% Fat</p>
+                    <p><strong>Meals:</strong> 5 per day</p>
+                  </div>
+                </div>
+                <div class="plan-sample">
+                  <h3>Sample Day</h3>
+                  <ul class="meal-list">
+                    <li><strong>Breakfast:</strong> Scrambled eggs with spinach and whole wheat toast</li>
+                    <li><strong>Snack:</strong> Greek yogurt with almonds</li>
+                    <li><strong>Lunch:</strong> Grilled chicken with quinoa and roasted vegetables</li>
+                    <li><strong>Snack:</strong> Protein shake with banana</li>
+                    <li><strong>Dinner:</strong> Salmon with sweet potato and asparagus</li>
+                  </ul>
+                </div>
+                <button class="btn-gold" id="select-plan">Select This Plan</button>
+              </div>
+            `
+          },
+          'keto-meal': {
+            title: 'Keto Diet Plan',
+            content: `
+              <div class="plan-details">
+                <div class="plan-header">
+                  <img src="images/keto.jpg" alt="Keto Meal" class="plan-image">
+                  <div class="plan-meta">
+                    <p><strong>Calories:</strong> 1800-2200 kcal/day</p>
+                    <p><strong>Macros:</strong> 70% Fat, 25% Protein, 5% Carbs</p>
+                    <p><strong>Meals:</strong> 3 meals + 2 snacks</p>
+                  </div>
+                </div>
+                <div class="plan-sample">
+                  <h3>Sample Day</h3>
+                  <ul class="meal-list">
+                    <li><strong>Breakfast:</strong> Avocado and eggs with bacon</li>
+                    <li><strong>Snack:</strong> Cheese and nuts</li>
+                    <li><strong>Lunch:</strong> Bunless burger with cauliflower mash</li>
+                    <li><strong>Snack:</strong> Keto fat bombs</li>
+                    <li><strong>Dinner:</strong> Steak with buttered vegetables</li>
+                  </ul>
+                </div>
+                <button class="btn-gold" id="select-plan">Select This Plan</button>
+              </div>
+            `
+          },
+          'vegan-meal': {
+            title: 'Vegan Meal Plan',
+            content: `
+              <div class="plan-details">
+                <div class="plan-header">
+                  <img src="images/vegan-meal-prep.jpg" alt="Vegan Meal" class="plan-image">
+                  <div class="plan-meta">
+                    <p><strong>Calories:</strong> 2000-2500 kcal/day</p>
+                    <p><strong>Macros:</strong> 25% Protein, 50% Carbs, 25% Fat</p>
+                    <p><strong>Meals:</strong> 4 per day</p>
+                  </div>
+                </div>
+                <div class="plan-sample">
+                  <h3>Sample Day</h3>
+                  <ul class="meal-list">
+                    <li><strong>Breakfast:</strong> Tofu scramble with whole grain toast</li>
+                    <li><strong>Lunch:</strong> Lentil curry with brown rice</li>
+                    <li><strong>Snack:</strong> Hummus with vegetable sticks</li>
+                    <li><strong>Dinner:</strong> Chickpea and vegetable stir-fry</li>
+                  </ul>
+                </div>
+                <button class="btn-gold" id="select-plan">Select This Plan</button>
+              </div>
+            `
+          },
+          'performance-meal': {
+            title: 'Athlete Performance Plan',
+            content: `
+              <div class="plan-details">
+                <div class="plan-header">
+                  <img src="images/athlete-performance.jpeg" alt="Performance Meal" class="plan-image">
+                  <div class="plan-meta">
+                    <p><strong>Calories:</strong> 3000-3500 kcal/day</p>
+                    <p><strong>Macros:</strong> 30% Protein, 50% Carbs, 20% Fat</p>
+                    <p><strong>Meals:</strong> 6 per day</p>
+                  </div>
+                </div>
+                <div class="plan-sample">
+                  <h3>Sample Day</h3>
+                  <ul class="meal-list">
+                    <li><strong>Pre-Workout:</strong> Oatmeal with banana and almond butter</li>
+                    <li><strong>Post-Workout:</strong> Protein smoothie with berries</li>
+                    <li><strong>Breakfast:</strong> Egg whites with sweet potato hash</li>
+                    <li><strong>Lunch:</strong> Grilled chicken with quinoa and vegetables</li>
+                    <li><strong>Snack:</strong> Greek yogurt with granola</li>
+                    <li><strong>Dinner:</strong> Salmon with roasted potatoes and asparagus</li>
+                  </ul>
+                </div>
+                <button class="btn-gold" id="select-plan">Select This Plan</button>
+              </div>
+            `
+          }
+        };
+
+        document.getElementById('modal-title').textContent = plans[planId].title;
+        document.getElementById('modal-body').innerHTML = plans[planId].content;
+        modal.style.display = 'block';
+
+        // Add event listener to the dynamically created select button
+        document.getElementById('select-plan')?.addEventListener('click', function() {
+          alert(`You've selected the ${plans[planId].title}`);
+          modal.style.display = 'none';
+        });
+      }
+
+      // Close modal when clicking X
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

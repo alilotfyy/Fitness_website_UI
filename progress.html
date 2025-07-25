@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TitanForge Fitness - Home</title>
+
+  <!-- Chart.js for progress visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Stylesheet Link -->
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <div class="sidebar collapsed">
+    <!-- Main Navigation Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Main Sections</button>
+      <ul class="sidebar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workouts.html">Workout</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- E-commerce Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Shop</button>
+      <ul class="sidebar-links">
+        <li><a href="supplements.html">Supplements</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="equipments.html">Sports Equipment</a></li>
+      </ul>
+    </div>
+
+    <!-- Business Portals Section -->
+    <div class="sidebar-section">
+      <button class="collapsible">Portal</button>
+      <ul class="sidebar-links">
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="b2e.html">B2E</a></li>
+        <li><a href="b2g.html">B2G</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="main-content collapsed">
+    
+    <!-- Header Section -->
+    <header>
+      <div class="header-left">
+        <!-- Hamburger menu for mobile -->
+        <button id="toggle-sidebar" class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        
+        <!-- Logo with link to homepage -->
+        <a href="index.html" class="logo">
+          Titan<span>Forge</span>
+        </a>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav>
+        <ul>
+          <li>
+            <a href="subscription.html" class="btn-gold">
+              <img src="images/crown.png" alt="Crown" class="icon-crown" />
+              Subscription
+            </a>
+          </li>
+          <li><a href="workouts.html" class="btn-header">Workouts</a></li>
+          <li><a href="nutrition.html" class="btn-header">Nutrition</a></li>
+          <li><a href="progress.html" class="btn-header">Progress Tracker</a></li>
+          <li><a href="community.html" class="btn-header">Community</a></li>
+          
+          <!-- Profile/login icon -->
+          <li>
+            <a href="login.html" class="profile-icon">
+              <img src="images/profile.png" alt="User Profile">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- Progress Dashboard Section -->
+    <section class="progress-dashboard">
+      <div class="dashboard-header">
+        <h1>Your Fitness Progress</h1>
+        <div class="date-selector">
+          <select id="time-period">
+            <option value="7">Last 7 Days</option>
+            <option value="30" selected>Last 30 Days</option>
+            <option value="90">Last 90 Days</option>
+            <option value="365">Last Year</option>
+            <option value="all">All Time</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Progress Summary Cards -->
+      <div class="summary-cards">
+        <div class="summary-card">
+          <div class="program-icon">⚖️</div>
+          <div class="card-content">
+            <h3>Weight Progress</h3>
+            <div class="progress-value">75 <span>kg</span></div>
+            <div class="progress-change positive">
+              <span>↓ 2.5kg</span> last 30 days
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 75%"></div>
+            </div>
+            <div class="progress-labels">
+              <span>Start: 80kg</span>
+              <span>Goal: 70kg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <div class="program-icon">🏋🏻‍♂️</div>
+          <div class="card-content">
+            <h3>Workouts Completed</h3>
+            <div class="progress-value">18</div>
+            <div class="progress-change positive">
+              <span>↑ 25%</span> from last month
+            </div>
+            <canvas id="workoutsChart"></canvas>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <div class="program-icon">💪</div>
+          <div class="card-content">
+            <h3>Strength Gains</h3>
+            <div class="progress-stats">
+              <div class="stat-item">
+                <span class="stat-name">Bench Press</span>
+                <span class="stat-value">+5kg</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-name">Squat</span>
+                <span class="stat-value">+7.5kg</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-name">Deadlift</span>
+                <span class="stat-value">+10kg</span>
+              </div>
+            </div>
+            <canvas id="strengthChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Progress Sections -->
+      <div class="progress-sections">
+        <!-- Weight Tracking Section -->
+        <div class="progress-section">
+          <div class="section-header">
+            <h2>Weight Tracking</h2>
+            <button class="btn-add">+ Add Measurement</button>
+          </div>
+          <div class="section-content">
+            <canvas id="weightChart"></canvas>
+            <div class="weight-details">
+              <div class="detail-card">
+                <h4>Current Weight</h4>
+                <div class="detail-value">75.2 <span>kg</span></div>
+                <div class="detail-change negative">+0.3kg from last week</div>
+              </div>
+              <div class="detail-card">
+                <h4>Body Fat %</h4>
+                <div class="detail-value">18.5 <span>%</span></div>
+                <div class="detail-change positive">-0.8% from last month</div>
+              </div>
+              <div class="detail-card">
+                <h4>BMI</h4>
+                <div class="detail-value">23.1</div>
+                <div class="detail-change positive">-0.5 from last month</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workout Progress Section -->
+        <div class="progress-section">
+          <div class="section-header">
+            <h2>Workout Progress</h2>
+            <div class="view-options">
+              <button class="view-option active">By Exercise</button>
+              <button class="view-option">By Muscle Group</button>
+              <button class="view-option">By Workout Type</button>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="exercise-progress">
+              <div class="exercise-card">
+                <h4>Bench Press</h4>
+                <div class="exercise-stats">
+                  <div class="stat">
+                    <span class="stat-label">Current Max</span>
+                    <span class="stat-value">85kg</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value positive">+5kg</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-label">Volume</span>
+                    <span class="stat-value">2,450kg</span>
+                  </div>
+                </div>
+                <canvas class="exercise-chart" id="benchChart"></canvas>
+              </div>
+              
+              <div class="exercise-card">
+                <h4>Squat</h4>
+                <div class="exercise-stats">
+                  <div class="stat">
+                    <span class="stat-label">Current Max</span>
+                    <span class="stat-value">120kg</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value positive">+7.5kg</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-label">Volume</span>
+                    <span class="stat-value">3,800kg</span>
+                  </div>
+                </div>
+                <canvas class="exercise-chart" id="squatChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nutrition Progress Section -->
+        <div class="progress-section">
+          <div class="section-header">
+            <h2>Nutrition Progress</h2>
+            <div class="nutrition-period">
+              <span>Showing data for:</span>
+              <select>
+                <option>Today</option>
+                <option selected>This Week</option>
+                <option>This Month</option>
+              </select>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="macros-overview">
+              <div class="macro-card">
+                <h4>Calories</h4>
+                <div class="macro-progress">
+                  <div class="progress-circle" id="calories-circle">
+                    <span>1,950</span>
+                  </div>
+                  <div class="macro-details">
+                    <div class="macro-target">Target: 2,200</div>
+                    <div class="macro-avg">Daily avg: 2,050</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="macro-card">
+                <h4>Protein</h4>
+                <div class="macro-progress">
+                  <div class="progress-circle" id="protein-circle">
+                    <span>145g</span>
+                  </div>
+                  <div class="macro-details">
+                    <div class="macro-target">Target: 160g</div>
+                    <div class="macro-avg">Daily avg: 150g</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="macro-card">
+                <h4>Carbs</h4>
+                <div class="macro-progress">
+                  <div class="progress-circle" id="carbs-circle">
+                    <span>210g</span>
+                  </div>
+                  <div class="macro-details">
+                    <div class="macro-target">Target: 240g</div>
+                    <div class="macro-avg">Daily avg: 225g</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <canvas id="nutritionChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- ==================== FOOTER ==================== -->
+     <footer>
+      <div class="footer-container">
+        <!-- Sitemap Links Column -->
+        <div class="footer-section">
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workouts.html">Workout</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links Column -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://twitter.com/TitanForger.fit" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://www.youtube.com/c/TitanForger.fit" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links Column -->
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="security-statement.html">Security Statement</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get fitness tips and special offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn-header">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 TitanForge Fitness. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Wait for DOM to be fully loaded before executing JavaScript
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      // Collapsible sidebar sections functionality
+      const collapsibles = document.querySelectorAll('.collapsible');
+      collapsibles.forEach(button => {
+        button.addEventListener('click', () => {
+          const links = button.nextElementSibling;
+          if (links) {
+            // Toggle display between block and none
+            links.style.display = links.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+  
+      // Toggle entire sidebar visibility
+      const toggleBtn = document.getElementById('toggle-sidebar');
+      const sidebar = document.querySelector('.sidebar');
+      const mainContent = document.querySelector('.main-content');
+  
+      toggleBtn.addEventListener('click', () => {
+        // Toggle collapsed class on both sidebar and main content
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('collapsed');
+        
+        // Optional: Store sidebar state in localStorage
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+      });
+      
+      // Optional: Check for saved sidebar state on page load
+      const savedState = localStorage.getItem('sidebarCollapsed');
+      if (savedState === 'true') {
+        sidebar.classList.add('collapsed');
+        mainContent.classList.add('collapsed');
+      }
+
+      // Initialize Charts
+      // Workouts Completed Chart
+      const workoutsCtx = document.getElementById('workoutsChart').getContext('2d');
+      const workoutsChart = new Chart(workoutsCtx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+          datasets: [{
+            label: 'Workouts',
+            data: [12, 15, 14, 18],
+            borderColor: '#e63946',
+            backgroundColor: 'rgba(230, 57, 70, 0.1)',
+            tension: 0.3,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      // Strength Progress Chart
+      const strengthCtx = document.getElementById('strengthChart').getContext('2d');
+      const strengthChart = new Chart(strengthCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Bench', 'Squat', 'Deadlift'],
+          datasets: [{
+            label: 'Current Max',
+            data: [85, 120, 140],
+            backgroundColor: [
+              'rgba(230, 57, 70, 0.7)',
+              'rgba(230, 57, 70, 0.7)',
+              'rgba(230, 57, 70, 0.7)'
+            ],
+            borderColor: [
+              'rgba(230, 57, 70, 1)',
+              'rgba(230, 57, 70, 1)',
+              'rgba(230, 57, 70, 1)'
+            ],
+            borderWidth: 1
+          }, {
+            label: 'Previous Max',
+            data: [80, 112.5, 130],
+            backgroundColor: [
+              'rgba(108, 117, 125, 0.7)',
+              'rgba(108, 117, 125, 0.7)',
+              'rgba(108, 117, 125, 0.7)'
+            ],
+            borderColor: [
+              'rgba(108, 117, 125, 1)',
+              'rgba(108, 117, 125, 1)',
+              'rgba(108, 117, 125, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      // Weight Tracking Chart
+      const weightCtx = document.getElementById('weightChart').getContext('2d');
+      const weightChart = new Chart(weightCtx, {
+        type: 'line',
+        data: {
+          labels: ['1/4', '8/4', '15/4', '22/4', '29/4', '6/5'],
+          datasets: [{
+            label: 'Weight (kg)',
+            data: [77.5, 76.8, 76.1, 75.7, 75.3, 75.2],
+            borderColor: '#e63946',
+            backgroundColor: 'rgba(230, 57, 70, 0.1)',
+            tension: 0.3,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+
+      // Exercise Progress Charts
+      const benchCtx = document.getElementById('benchChart').getContext('2d');
+      const benchChart = new Chart(benchCtx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+          datasets: [{
+            label: 'Max Weight (kg)',
+            data: [70, 75, 80, 85],
+            borderColor: '#e63946',
+            backgroundColor: 'rgba(230, 57, 70, 0.1)',
+            tension: 0.3,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+
+      const squatCtx = document.getElementById('squatChart').getContext('2d');
+      const squatChart = new Chart(squatCtx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+          datasets: [{
+            label: 'Max Weight (kg)',
+            data: [100, 107.5, 112.5, 120],
+            borderColor: '#e63946',
+            backgroundColor: 'rgba(230, 57, 70, 0.1)',
+            tension: 0.3,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+
+      // Nutrition Chart
+      const nutritionCtx = document.getElementById('nutritionChart').getContext('2d');
+      const nutritionChart = new Chart(nutritionCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          datasets: [
+            {
+              label: 'Protein',
+              data: [140, 155, 150, 145, 160, 135, 140],
+              backgroundColor: 'rgba(230, 57, 70, 0.7)'
+            },
+            {
+              label: 'Carbs',
+              data: [200, 220, 210, 230, 240, 190, 200],
+              backgroundColor: 'rgba(255, 193, 7, 0.7)'
+            },
+            {
+              label: 'Fat',
+              data: [60, 65, 55, 70, 75, 50, 60],
+              backgroundColor: 'rgba(13, 110, 253, 0.7)'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+            },
+            y: {
+              stacked: true
+            }
+          }
+        }
+      });
+
+      // Create circular progress indicators
+      function createProgressCircle(id, percent) {
+        const circle = document.getElementById(id);
+        const radius = 40;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (percent / 100) * circumference;
+        
+        circle.innerHTML = `
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="${radius}" stroke="#333" stroke-width="8" fill="none"/>
+            <circle cx="50" cy="50" r="${radius}" stroke="#e63946" stroke-width="8" fill="none" 
+                    stroke-dasharray="${circumference}" 
+                    stroke-dashoffset="${offset}"
+                    transform="rotate(-90 50 50)"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" fill="#fff" font-size="16">${circle.textContent}</text>
+          </svg>
+        `;
+      }
+
+      createProgressCircle('calories-circle', 88);
+      createProgressCircle('protein-circle', 90);
+      createProgressCircle('carbs-circle', 87.5);
+    });
+  </script>
+</body>
+</html>
